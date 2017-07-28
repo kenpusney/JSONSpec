@@ -2,63 +2,54 @@
     "JSONSpec": {
         "version": "2"
     },
-
     "type": {
         "JSONSpec": {
-            "version": "String"
+            "version": "String",
+            "imports?": "[String] default([stdlib])",
+            "exports?": "[String] default([type])"
         },
-
         "type": "String | #Type",
-
         "constraint?": {
-            "[#JSONPath]": "#Constraint"
+            "[JSONPath]": "#Constraint"
         },
         "doc?": {
-            "[#JSONPath]": "#SpecDoc"
+            "[JSONPath]": "#SpecDoc"
         },
-
-        "subtype": {
+        "typedefs": {
             "[String]": {
                 "type": "#Type",
                 "constraint?": {
-                    "[#JSONPath]": "#Constraint"
+                    "[JSONPath]": "#Constraint"
                 },
                 "doc?": "#SpecDoc"
             }
         }
     },
-
     "constraint": {
         "$.JSONSpec.version": {
             "matches": "\\d+(\\.\\d+)*"
         }
     },
-
-    "subtype": {
-        "JSONPath": {
-            "type": "String",
-            "constraint": {
-                "$": {
-                    "matches": "\\$(\\.\\w+ | \\[\\w+\\] | \\*)*"
-                }
-            }
-        },
-
+    "typedefs": {
         "Type": {
             "type": {
                 "[String]": "String | #Type"
             }
         },
-
         "Constraint": {
-            "matches?": "String/regexp",
-            "length?": "Number | Range",
-            "*": "*"
+            "type": {
+                "matches?": "Regexp",
+                "length?": "Number | Range",
+                "ref": "URI",
+                "*": "*"
+            }
         },
-
         "SpecDoc": {
-            "contentType": "MediaType",
-            "content": "Text"
+            "type": {
+                "contentType?": "MediaType default('text/plain; charset=utf-8')",
+                "content?": "Text",
+                "ref?": "URI"
+            }
         }
     }
 }
