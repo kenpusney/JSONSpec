@@ -1,0 +1,64 @@
+{
+    "JSONSpec": {
+        "version": "2"
+    },
+
+    "type": {
+        "JSONSpec": {
+            "version": "String"
+        },
+
+        "type": "String | #Type",
+
+        "constraint?": {
+            "[#JSONPath]": "#Constraint"
+        },
+        "doc?": {
+            "[#JSONPath]": "#SpecDoc"
+        },
+
+        "subtype": {
+            "[String]": {
+                "type": "#Type",
+                "constraint?": {
+                    "[#JSONPath]": "#Constraint"
+                },
+                "doc?": "#SpecDoc"
+            }
+        }
+    },
+
+    "constraint": {
+        "$.JSONSpec.version": {
+            "matches": "\\d+(\\.\\d+)*"
+        }
+    },
+
+    "subtype": {
+        "JSONPath": {
+            "type": "String",
+            "constraint": {
+                "$": {
+                    "matches": "\\$(\\.\\w+ | \\[\\w+\\] | \\*)*"
+                }
+            }
+        },
+
+        "Type": {
+            "type": {
+                "[String]": "String | #Type"
+            }
+        },
+
+        "Constraint": {
+            "matches?": "String/regexp",
+            "length?": "Number | Range",
+            "*": "*"
+        },
+
+        "SpecDoc": {
+            "contentType": "MediaType",
+            "content": "Text"
+        }
+    }
+}
