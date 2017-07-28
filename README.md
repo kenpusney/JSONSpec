@@ -5,8 +5,8 @@ can be written in and can describe various format other than JSON.
 
 ### Syntax
 
-see `doc/syntax.md`.
+see [Structure & Syntax](doc/syntax.md).
 
 ### How-to
 
-see `doc/flow.md`.
+see [How to](doc/syntax.md).

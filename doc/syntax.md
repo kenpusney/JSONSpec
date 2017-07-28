@@ -16,7 +16,7 @@ A valid JSONSpec have following sections:
 
 #### Standard types
 
-see `doc/stlib.md`
+see [stdlib](stlib.md)
 
 #### Composite types
 
