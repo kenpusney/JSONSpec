@@ -9,4 +9,4 @@ see [Structure & Syntax](doc/syntax.md).
 
 ### How-to
 
-see [How to](doc/syntax.md).
+see [How to](doc/flow.md).
