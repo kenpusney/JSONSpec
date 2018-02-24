@@ -1,14 +1,9 @@
 title: JSONSpec
 description: make the world well-typed.
-destination: docs
-github:
-  repository_url: https://github.com/kenpusney/spec
-  repository_name: JSONSpec
-  owner_url: https://github.com/kenpusney
-  owner_name: Kimmy Leo
 theme: kimmy-site-theme
 plugins:
+  - jekyll-readme-index
   - jekyll-relative-links
   - jekyll-default-layout
-  - jekyll-readme-index
   - jekyll-optional-front-matter
+destination: docs

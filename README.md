@@ -1,6 +1,3 @@
----
-title: JSONSpec Home
----
 # JSONSpec
 
 JSONSpec is a specification format to design data schema / service / workflows. It
