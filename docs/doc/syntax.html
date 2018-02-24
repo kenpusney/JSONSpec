@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>JSONSpec | make the world well-typed.</title>
+<meta name="generator" content="Jekyll v3.7.2" />
+<meta property="og:title" content="JSONSpec" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="make the world well-typed." />
+<meta property="og:description" content="make the world well-typed." />
+<meta property="og:site_name" content="JSONSpec" />
+<script type="application/ld+json">
+{"description":"make the world well-typed.","@type":"WebPage","url":"/doc/syntax.html","headline":"JSONSpec","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href=""> <h1>JSONSpec</h1> </a>
+        <p>make the world well-typed.</p>
+
+        
+        <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#jsonspec-structure--syntax">JSONSpec structure & syntax</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#basic-structure">Basic structure</a></li>
+<li class="toc-entry toc-h2"><a href="#types">Types</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#standard-types">Standard types</a></li>
+<li class="toc-entry toc-h4"><a href="#composite-types">Composite types</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#selector-syntax">Selector syntax</a></li>
+</ul>
+</li>
+</ul>
+        
+      </header>
+      <section>
+
+      <h1></h1>
+
+<h1 id="jsonspec-structure--syntax">
+<a id="jsonspec-structure--syntax" class="anchor" href="#jsonspec-structure--syntax" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSONSpec structure &amp; syntax</h1>
+
+<h2 id="basic-structure">
+<a id="basic-structure" class="anchor" href="#basic-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic structure</h2>
+
+<p>JSONSpec describes both the schema and the semantics of a data/service,
+it requires as much as possible info to build a rich specification.</p>
+
+<p>A valid JSONSpec have following sections:</p>
+<ul>
+  <li>
+<strong><code class="highlighter-rouge">JSONSpec</code> header</strong>, contains the basic infomations of this JSONSpec document: the version of spec standard,</li>
+  <li>
+<strong><code class="highlighter-rouge">type</code> section</strong>, contains the type information of the data</li>
+  <li>
+<strong><code class="highlighter-rouge">constraint</code> optional section</strong>, which provides more specific constaint for provided data field.</li>
+  <li>
+<strong><code class="highlighter-rouge">doc</code> optional section</strong>, contains the documents to describe related dta field.</li>
+  <li>
+<strong><code class="highlighter-rouge">typedefs</code> optional section</strong>, contains internal type definitions.</li>
+</ul>
+
+<h2 id="types">
+<a id="types" class="anchor" href="#types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Types</h2>
+
+<h4 id="standard-types">
+<a id="standard-types" class="anchor" href="#standard-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard types</h4>
+
+<p>see <a href="/doc/stdlib.html">stdlib</a></p>
+
+<h4 id="composite-types">
+<a id="composite-types" class="anchor" href="#composite-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Composite types</h4>
+
+<ul>
+  <li>
+<strong>Arrays</strong>: <code class="highlighter-rouge">"[&lt;type&gt;]"</code>;</li>
+  <li>
+<strong>Objects</strong>: <code class="highlighter-rouge">{ "&lt;keys&gt;": "&lt;typespec&gt;" (, "&lt;keys&gt;": "&lt;typespec&gt;") + }</code>
+</li>
+</ul>
+
+<h2 id="selector-syntax">
+<a id="selector-syntax" class="anchor" href="#selector-syntax" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selector syntax</h2>
+
+<ul>
+  <li>
+<strong>IdSelector</strong>: just the key of the field</li>
+  <li>
+<strong>OptionalSelector</strong>: <code class="highlighter-rouge">&lt;key&gt;?</code>, means the key can be optional</li>
+  <li>
+<strong>TypeSelector</strong>: <code class="highlighter-rouge">[&lt;type&gt;]</code>the key must match specifid type (typically string, with some specific constraints)</li>
+  <li>
+<strong>AnySelector</strong>: *, match any key</li>
+</ul>
+
+
+
+      </section>
+      <footer>
+
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/kenpusney">Kimmy Leo</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>
+

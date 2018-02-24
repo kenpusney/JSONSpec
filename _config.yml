@@ -1,6 +1,6 @@
 title: JSONSpec
 description: make the world well-typed.
-remote-theme: kimmy-site-theme
+theme: kimmy-site-theme
 plugins:
   - jekyll-readme-index
   - jekyll-relative-links
