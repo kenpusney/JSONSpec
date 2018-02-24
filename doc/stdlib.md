@@ -1,3 +1,5 @@
+---
+---
 # Standard built-in types of JSONSpec
 
   - *

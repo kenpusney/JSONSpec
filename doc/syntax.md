@@ -1,3 +1,7 @@
+---
+toc: true
+---
+
 # JSONSpec structure & syntax
 
 ## Basic structure
